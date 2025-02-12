@@ -1,3 +1,5 @@
+# Домашнее задание №1. Основы Python (Моделирование работы зоомагазина)
+
 class Animal:
 
     def __init__(self, name, age, health):
@@ -45,6 +47,7 @@ class Fish(Animal):
             self.health += 3
         elif self.health > 97 and self.health < 100:
             self.health = 100
+
 class ZooShop:
 
     def __init__(self):
@@ -63,18 +66,21 @@ class ZooShop:
     def __len__(self):
         return len(self.animal_all)
 
-
+# Пример использования программы
 dog = Dog("Rex", 3, 100, "German Shepherd", 10)
 cat = Cat("Barsik", 2, 90, "black", "mouse")
 fish = Fish("Goldie", 1, 80, "goldfish", "small")
 loh = Animal('r', 1, 1)
+
 zoo_shop = ZooShop()
 zoo_shop.add_animal(dog)
 zoo_shop.add_animal(loh)
 zoo_shop.add_animal(cat)
 zoo_shop.add_animal(fish)
+
 print(zoo_shop)
 # Должен вывести информацию обо всех животных
+
 zoo_shop.remove_animal(cat)
 print(len(zoo_shop))
 # Должен вернуть 2, так как осталось два животных
